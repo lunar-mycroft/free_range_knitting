@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize a dishcloth</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            padding: 1em 3em;
+        }
+        input {
+            width: 3em;
+        }
+
+        input#submit{
+            width: 5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customize dishcloth properties</h1>
+    <form action="/dishcloth">
+        <label for="width">Width:</label>
+        <input type="number" id="width" name="width" value="{{settings.width}}">
+        <label for="height">Height:</label>
+        <input type="number" id="height" name="height" value="{{settings.height}}">
+        <br>
+        <label for="min_continuous">Minimum continuous stitches</label>
+        <input type="number" id="min_continuous" name="min_continuous" value="{{settings.min_continuous}}">
+        <label for="max_continuous">Maximum continuous stitches</label>
+        <input type="number" id="max_continuous" name="max_continuous" value="{{settings.max_continuous}}">
+        <br>
+        <label for="num_max">Number of max-length stitches</label>
+        <input type="number" id="num_max" name="num_max" value="{{settings.num_max}}">
+        <br>
+        <label for="border">Border stitches</label>
+        <input type="number" id="border" name="border" value="3">
+        <br>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+</html>

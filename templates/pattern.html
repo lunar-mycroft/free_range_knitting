@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pattern {{seed}}</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            padding: 1em 3em;
+        }
+        p.preview {
+            font-family: "Courier New", monospace;
+            line-height: 0.9em;
+            letter-spacing: 0.15em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dishcloth {{seed}}</h1>
+    Not happy with this pattern? <a href="{{shuffle_url}}">Get another</a>
+    or <a href="{{customize_url}}">customize the size</a>
+    <h2>It should look like:</h2>
+    <p class="preview">
+        {% for row in scrubber.visualize() %}
+            {{row}}<br>
+        {% endfor %}
+    </p>
+
+    <h2>Pattern:</h2>
+    <ol>{% for row in scrubber.pattern() %}
+        <li>{{row}}</li>
+    {% endfor %}</ol>
+
+</body>
+</html>
