@@ -7,4 +7,7 @@ then navigate to the project root and run `python3 -m pipenv install`
 
 ## Running
 
-simply run the terminal command `python3 -m uvicorn --port {PORT_NUMBER}`
+```bash
+python3 -m pipenv shell
+python3 -m uvicorn app:app --port {PORT}
+```

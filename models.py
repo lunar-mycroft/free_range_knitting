@@ -50,7 +50,7 @@ class Pattern:
             )
 
     def pattern(self) -> Iterator[str]:
-        for i, line in enumerate(self.stitches):
+        for i, line in enumerate(self.stitches[::-1]):
             yield ", ".join(list(map(str, line))[::(-1)**i])
 
 
